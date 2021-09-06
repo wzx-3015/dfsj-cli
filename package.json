@@ -5,9 +5,11 @@
   "bin": {
     "dfsj-cli": "./bin/dfsj-cli.js"
   },
+  "main": "./lib/index.js",
   "scripts": {
     "build": "rm -rf lib && tsc --build"
   },
+  "files": ["package.json", "README.md", "lib"],
   "keywords": [
     "vue3",
     "dfsj",
