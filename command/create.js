@@ -2,7 +2,7 @@
  * @Description: 请输入当前文件描述
  * @Author: @Xin (834529118@qq.com)
  * @Date: 2021-09-06 11:31:35
- * @LastEditTime: 2021-09-06 17:45:58
+ * @LastEditTime: 2021-09-06 18:46:15
  * @LastEditors: @Xin (834529118@qq.com)
  */
 import ora from 'ora'
@@ -89,7 +89,7 @@ const create = () => {
   .then(({ name, description, author, origin }) => {
     isFileExist(name)
     spinner.start()
-    download('wzx-3015/auth-vue-next', `./${name}`, err => {
+    download('wzx-3015/auth-vue-next#main', `./${name}`, err => {
       if (err) {
         spinner.fail('模板下载失败！')
         console.log(red(err))
@@ -97,24 +97,21 @@ const create = () => {
       } else {
         spinner.succeed('模板准备就绪！请进一步操作。')
 
+        let gitChange = false
         if (!which('git')) {
           console.log('git 命令不可用')
-          exit(1);
-        }
-
-        cd(`./${name}`)
-
-        let gitChange = false
-
-        if (origin && origin !== '') {
-          if (exec('git remote -v').stdout) {
-            exec(`git remote set-url origin ${origin}`)
-          } else {
-            exec(`git remote add origin ${origin}`)
-          }
         } else {
-          gitChange = true
-          console.log(yellow(`请调整git仓库地址`))
+          cd(`./${name}`)
+  
+          if (origin && origin !== '') {
+            if (exec('git remote -v').stdout) {
+              exec(`git remote set-url origin ${origin}`)
+            } else {
+              exec(`git remote add origin ${origin}`)
+            }
+          } else {
+            gitChange = true
+          }
         }
 
         console.log(`${bgWhite.black('  下一步操作  ')}`)

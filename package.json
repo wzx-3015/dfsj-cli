@@ -1,12 +1,13 @@
 {
   "name": "dfsj-auth-creator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "权限管理系统脚手架",
   "bin": {
     "dfsj-cli": "./bin/dfsj-cli.js"
   },
   "main": "./lib/index.js",
   "scripts": {
+    "serve": "gulp start",
     "build": "gulp build"
   },
   "files": [
