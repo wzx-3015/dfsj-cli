@@ -9,7 +9,11 @@
   "scripts": {
     "build": "gulp build"
   },
-  "files": ["package.json", "README.md", "lib"],
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
   "keywords": [
     "vue3",
     "dfsj",
