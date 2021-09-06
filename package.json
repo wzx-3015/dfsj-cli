@@ -1,0 +1,38 @@
+{
+  "name": "dfsj-auth-creator",
+  "version": "0.0.1",
+  "description": "权限管理系统脚手架",
+  "bin": {
+    "dfsj-cli": "./bin/dfsj-cli.js"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc --build"
+  },
+  "keywords": [
+    "vue3",
+    "dfsj",
+    "auth",
+    "auth 脚手架",
+    "脚手架",
+    "dfsj-cli"
+  ],
+  "author": "wzx <834529118@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
+    "chalk": "^4.1.2",
+    "clear-console": "^1.1.0",
+    "commander": "^8.1.0",
+    "del": "^6.0.0",
+    "download-git-repo": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-watch": "^5.0.1",
+    "inquirer": "^8.1.2",
+    "ora": "3.4.0",
+    "shelljs": "^0.8.4"
+  }
+}
