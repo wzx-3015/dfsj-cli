@@ -7,7 +7,7 @@
   },
   "main": "./lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && tsc --build"
+    "build": "gulp build"
   },
   "files": ["package.json", "README.md", "lib"],
   "keywords": [
