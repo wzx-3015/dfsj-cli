@@ -16,6 +16,10 @@
     "脚手架",
     "dfsj-cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wzx-3015/dfsj-cli"
+  },
   "author": "wzx <834529118@qq.com>",
   "license": "MIT",
   "dependencies": {
